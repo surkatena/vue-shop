@@ -1,20 +1,20 @@
 <template>
     <div>
       <a class="catalog__pic" href="#">
-        <img :src="image" :alt="title">
+        <img :src="product.image" :alt="product.title">
       </a>
 
       <h3 class="catalog__title">
         <a href="#">
-          {{ title }}
+          {{ product.title }}
         </a>
       </h3>
 
       <span class="catalog__price">
-        {{ price }} ₽
+        {{ product.price }} ₽
       </span>
 
-      <!-- <ul class="colors colors--black">
+      <ul class="colors colors--black">
         <li class="colors__item">
           <label class="colors__label" for="color-1">
             <input class="colors__radio sr-only" type="radio" name="color-1"
@@ -39,12 +39,12 @@
             </span>
           </label>
         </li>
-      </ul> -->
+      </ul>
     </div>
 </template>
 
 <script>
 export default {
-  props: ['title', 'image', 'price'],
+  props: ['product'],
 };
 </script>
